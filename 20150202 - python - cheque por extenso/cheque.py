@@ -1,14 +1,22 @@
 
 def cheque_por_extenso(valor):
 
+    valores = {
+        '1' : 'um',
+        '2' : 'dois',
+    }
+
     unidades = ['centavo','centavos']
-    valores = ['um', 'dois']
 
     numero_por_extenso = ''
+    singular = '1'
+    s_valor = repr(valor)
 
-    if valor == 0.01:
-        numero_por_extenso = valores[0] +' '+ unidades[0]
-    elif valor == 0.02:
-        numero_por_extenso = valores[1] +' '+ unidades[1]
+    numero_por_extenso = valores[s_valor[-1]]
+
+    if s_valor[-1] == singular:
+        numero_por_extenso = numero_por_extenso +' '+ unidades[0]
+    else:
+        numero_por_extenso = numero_por_extenso +' '+ unidades[1]
 
     return numero_por_extenso
