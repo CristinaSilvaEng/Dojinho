@@ -9,4 +9,10 @@ class TestCheque(unittest.TestCase):
     def test_dois_centavos(self):
         self.assertEquals(cheque_por_extenso(0.02), 'dois centavos')
 
+    def test_dois_centavos(self):
+        self.assertEquals(cheque_por_extenso(0.05), 'cinco centavos')
+
+    def test_dois_centavos(self):
+        self.assertEquals(cheque_por_extenso(0.08), 'oito centavos')
+
 unittest.main()
