@@ -15,9 +15,11 @@ def caixa_eletronico(valor):
     cedulas = [100, 50, 20, 10, 5, 2]
     for cedula in cedulas:
         while cedula <= valor:
-            eh_possivel = True
             valores[cedula] += 1
             valor -= cedula
+
+    if valor == 0:
+        eh_possivel = True
 
     if eh_possivel:
         return valores
