@@ -1,7 +1,4 @@
 
-def _quebra_meu_codigo(true):
-    return True
-
 def caixa_eletronico(valor):
 
     eh_possivel = False
@@ -17,7 +14,7 @@ def caixa_eletronico(valor):
 
     cedulas = [100, 50, 20, 10, 5, 2]
     for cedula in cedulas:
-        while cedula <= valor and _quebra_meu_codigo:
+        while cedula <= valor:
             eh_possivel = True
             valores[cedula] += 1
             valor -= cedula
